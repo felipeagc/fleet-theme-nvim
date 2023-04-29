@@ -80,7 +80,7 @@ function M.setup()
         Boolean        = { fg = palette.yellow }, --  a boolean constant: TRUE, false
         Float          = { fg = palette.yellow }, --    a floating point constant: 2.3e10
 
-        Identifier     = { link = "Normal" }, -- (preferred) any variable name
+        Identifier     = { fg = palette.light }, -- (preferred) any variable name
         Function       = { fg = palette.yellow }, -- function name (also: methods for classes)
 
         Keyword        = { fg = palette.cyan }, --  any other keyword
@@ -102,10 +102,10 @@ function M.setup()
         Structure      = { link = "Type" }, --  struct, union, enum, etc.
         Typedef        = { link = "Type" }, --  A typedef
 
-        Special        = { link = "Normal" }, -- (preferred) any special symbol
+        Special        = { fg = palette.light }, -- (preferred) any special symbol
         SpecialChar    = { fg = palette.yellow }, --  special character in a constant
         -- Tag            = { }, --    you can use CTRL-] on this
-        Delimiter      = { link = "Normal" }, --  character that needs attention
+        Delimiter      = { fg = palette.light }, --  character that needs attention
         -- SpecialComment = { }, -- special things inside a comment
         -- Debug          = { }, --    debugging statements
 
@@ -188,9 +188,9 @@ function M.setup()
         -- ["@parameter"]          = { } , -- Parameters of a function.
         -- ["@parameter.reference"] = { } , -- References to parameters of a function.
         -- ["@property"]           = { } , -- Same as `["@field"]`.
-        ["@punctuation.delimiter"]     = { link = "Normal" } , -- Punctuation delimiters: Periods, commas, semicolons, etc.
-        ["@punctuation.bracket"]       = { link = "Normal" } , -- Brackets, braces, parentheses, etc.
-        ["@punctuation.special"]       = { link = "Normal" } , -- Special punctuation that doesn't fit into the previous categories.
+        ["@punctuation.delimiter"]     = { fg = palette.light } , -- Punctuation delimiters: Periods, commas, semicolons, etc.
+        ["@punctuation.bracket"]       = { fg = palette.light } , -- Brackets, braces, parentheses, etc.
+        ["@punctuation.special"]       = { fg = palette.light } , -- Special punctuation that doesn't fit into the previous categories.
         -- ["@repeat"]             = { } , -- Keywords related to loops: `for`, `while`, etc.
         ["@string"]             = { fg = palette.pink } , -- String literals.
         -- ["@string.regex"]        = { } , -- Regular expression literals.
