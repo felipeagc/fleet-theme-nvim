@@ -11,7 +11,6 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
 {
   "felipeagc/fleet-theme-nvim",
-  dependencies = { "rktjmp/lush.nvim" }, -- lush.nvim is required
   config = function() vim.cmd("colorscheme fleet") end
 }
 ```
