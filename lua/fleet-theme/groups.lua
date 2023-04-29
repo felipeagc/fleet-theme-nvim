@@ -73,7 +73,7 @@ function M.setup()
         -- default,
         -- Uncomment and edit if you want more specific syntax highlighting.
 
-        Constant       = { fg = palette.cyan }, -- (preferred) any constant
+        Constant       = { fg = palette.purple }, -- (preferred) any constant
         String         = { fg = palette.pink }, --   a string constant: "this is a string"
         Character      = { fg = palette.yellow }, --  a character constant: 'c', '\n'
         Number         = { fg = palette.yellow }, --   a number constant: 234, 0xff
