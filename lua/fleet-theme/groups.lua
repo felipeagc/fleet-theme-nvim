@@ -42,9 +42,9 @@ function M.setup()
         NonText      = { link = "Comment" }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         -- NormalFloat  = { }, -- Normal text in floating windows.
         -- NormalNC     = { }, -- normal text in non-current windows
-        Pmenu        = { bg = palette.darkest, fg = palette.light }, -- Popup menu: normal item.
+        Pmenu        = { bg = palette.darker, fg = palette.light }, -- Popup menu: normal item.
         PmenuSel     = { bg = palette.selection, fg = palette.light, bold = true }, -- Popup menu: selected item.
-        PmenuSbar    = { bg = palette.darkest, fg = palette.light, bold = true }, -- Popup menu: scrollbar.
+        PmenuSbar    = { bg = palette.darker, fg = palette.light, bold = true }, -- Popup menu: scrollbar.
         PmenuThumb   = { bg = palette.light_gray, fg = palette.light, bold = true }, -- Popup menu: Thumb of the scrollbar.
         -- Question     = { }, -- |hit-enter| prompt and yes/no questions
         Search       = { fg = palette.light, bg = palette.selection, bold = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
@@ -219,6 +219,23 @@ function M.setup()
         ["@type_builtin"]        = { fg = palette.cyan } , -- Built-in types: `i32` in Rust.
         ["@variable"]           = { fg = palette.light } , -- Variable names that don't fit into other categories.
         -- ["@variable.builtin"]    = { Identifier } , -- Variable names defined by the language: `this` or `self` in Javascript.
+
+        ["@lsp.type.class"] = { link = "@constructor" },
+        ["@lsp.type.comment"] = {}, -- do not overwrite comments
+        ["@lsp.type.decorator"] = { link = "@parameter" },
+        ["@lsp.type.enum"] = { link = "@type" },
+        ["@lsp.type.enumMember"] = { link = "@constant" },
+        ["@lsp.type.function"] = { link = "@function" },
+        ["@lsp.type.interface"] = { link = "@keyword" },
+        ["@lsp.type.macro"] = { link = "@macro" },
+        ["@lsp.type.method"] = { link = "@method" },
+        ["@lsp.type.namespace"] = { link = "@namespace" },
+        ["@lsp.type.parameter"] = { link = "@parameter" },
+        ["@lsp.type.property"] = { link = "@property" },
+        ["@lsp.type.struct"] = { link = "@constructor" },
+        ["@lsp.type.type"] = { link = "@type" },
+        ["@lsp.type.typeParameter"] = { link = "@type.definition" },
+        ["@lsp.type.variable"] = { link = "@variable" },
     }
 
     for group, hl in pairs(config.overrides) do
