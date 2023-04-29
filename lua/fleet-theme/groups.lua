@@ -225,6 +225,8 @@ function M.setup()
         ["@lsp.type.type"] = { link = "@type" },
         ["@lsp.type.typeParameter"] = { link = "@type.definition" },
         ["@lsp.type.variable"] = { link = "@variable" },
+
+        IndentBlanklineChar = { fg = palette.darker },
     }
 
     for group, hl in pairs(config.overrides) do
