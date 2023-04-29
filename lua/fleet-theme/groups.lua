@@ -227,6 +227,14 @@ function M.setup()
         ["@lsp.type.variable"] = { link = "@variable" },
 
         IndentBlanklineChar = { fg = palette.darker },
+
+        TSRainbowRed = { fg = palette.red },
+        TSRainbowYellow = { fg = palette.yellow },
+        TSRainbowBlue = { fg = palette.blue },
+        TSRainbowOrange = { fg = palette.orange },
+        TSRainbowGreen = { fg = palette.green },
+        TSRainbowViolet = { fg = palette.purple },
+        TSRainbowCyan = { fg = palette.cyan },
     }
 
     for group, hl in pairs(config.overrides) do
