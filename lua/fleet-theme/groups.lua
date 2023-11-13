@@ -57,9 +57,11 @@ function M.setup()
         -- SpellRare    = { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
         StatusLine   = { bg = palette.darker, fg = palette.light }, -- status line of current window
         StatusLineNC = { bg = palette.darker, fg = palette.dark }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-        -- TabLine      = { bg = Normal.bg.lighten(10) }, -- tab pages line, not active tab page label
-        -- TabLineFill  = { TabLine }, -- tab pages line, where there are no labels
-        -- TabLineSel   = { bg = Normal.bg }, -- tab pages line, active tab page label
+
+        TabLine      = { bg = palette.darker, fg = palette.dark }, -- tab pages line, not active tab page label
+        TabLineFill  = { link = "TabLine" }, -- tab pages line, where there are no labels
+        TabLineSel   = { bg = palette.dark_gray, fg = palette.lightest }, -- tab pages line, active tab page label
+
         Title        = { fg = palette.green, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
         Visual       = { bg = palette.selection }, -- Visual mode selection
         -- VisualNOS    = { }, -- Visual mode selection when vim is "Not Owning the Selection".
