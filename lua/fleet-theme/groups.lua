@@ -27,6 +27,7 @@ function M.setup()
         -- TermCursorNC = { }, -- cursor in an unfocused terminal
         ErrorMsg     = { fg = palette.red_error, underline = true }, -- error messages on the command line
         VertSplit    = { bg = palette.background, fg = palette.darker }, -- the column separating vertically split windows
+        WinSeparator = { bg = palette.background, fg = palette.darker }, -- highlights window separators
         Folded       = { bg = palette.darker, fg = palette.light_gray }, -- line used for closed folds
         -- FoldColumn   = { }, -- 'foldcolumn'
         SignColumn   = { bg = palette.background, fg = palette.dark_gray }, -- column where |signs| are displayed
@@ -51,7 +52,7 @@ function M.setup()
         QuickFixLine = { fg = palette.yellow }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
         -- QuickFixLine = { bg = Normal.bg.mix(Search.bg, 40)  }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
         SpecialKey   = { link = "Directory" }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-        -- SpellBad     = { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
+        -- SpellBad     = { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
         -- SpellCap     = { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   = { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
         -- SpellRare    = { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
@@ -142,7 +143,7 @@ function M.setup()
         -- DiagnosticSignWarn         = { }, -- Used for "Warn" signs in sign column.
         -- DiagnosticSignInfo         = { }, -- Used for "Info" signs in sign column.
         -- DiagnosticSignHint         = { }, -- Used for "Hint" signs in sign column.
-        
+
         -- These groups are for tree-sitter:
 
         ["@attribute"]       = { fg = palette.green }, -- Annotations that can be attached to the code to denote some kind of meta information. e.g. C++/Dart attributes.
