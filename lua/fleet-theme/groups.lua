@@ -204,7 +204,7 @@ function M.setup()
         -- ["@warning"]            = { }, -- Text representation of a warning note.
         ["@danger"]             = { fg = palette.red_error }, -- Text representation of a danger note.
         ["@type"]               = { fg = palette.light_blue }, -- Type (and class) definitions and annotations.
-        ["@type_builtin"]        = { fg = palette.cyan }, -- Built-in types: `i32` in Rust.
+        ["@type.builtin"]       = { fg = palette.cyan }, -- Built-in types: `i32` in Rust.
         ["@variable"]           = { fg = palette.light }, -- Variable names that don't fit into other categories.
         -- ["@variable.builtin"]    = { Identifier }, -- Variable names defined by the language: `this` or `self` in Javascript.
 
